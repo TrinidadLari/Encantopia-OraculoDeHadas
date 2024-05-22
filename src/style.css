@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.flex {
+  display: flex !important;
+  justify-content: center;
+}
+
+button,
+.button {
+  background-color: rgb(155, 190, 135);
+  height: 30px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 8px 1px rgb(203, 232, 186);
+  border: none;
+  color: rgb(17, 53, 44);
+  font-family: "Cormorant SC", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 20px;
+  padding: 8px;
+  line-height: 10px;
+}
+@media (min-width: 970px) {
+  button,
+  .button {
+    font-size: 24;
+  }
+}
+@media (min-width: 1200px) {
+  button,
+  .button {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 970px) {
+  .cardBtnReturn__newF {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .cardBtnReturn__newF {
+    width: 50%;
+  }
+}
+
+#spinnerBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+nav {
+  background-color: rgb(44, 120, 101);
+  width: 100%;
+  padding-block: 20px;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74);
+}
+nav h1 {
+  font-family: "Cormorant SC", serif;
+  font-size: 34px;
+  margin-inline: 20px;
+  text-align: center;
+  padding: inherit;
+}
+@media (min-width: 970px) {
+  nav h1 {
+    font-size: 52px;
+  }
+}
+@media (min-width: 1200px) {
+  nav h1 {
+    font-size: 64px;
+  }
+}
+@media (min-width: 970px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav_btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-block: auto;
+}
+@media (min-width: 970px) {
+  .nav_btns {
+    display: flex;
+    gap: 50px;
+    margin-right: 48px;
+  }
+}
+
+#cardsBox {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin-top: 290px;
+  border-radius: 20px;
+  margin-inline: 10%;
+}
+@media (min-width: 970px) {
+  #cardsBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  #cardsBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#cardBox {
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74);
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgb(155, 190, 135);
+  margin-bottom: 10px;
+}
+#cardBox h2 {
+  font-family: "Cormorant SC", serif;
+  font-size: 36px;
+  margin-inline: auto;
+}
+@media (min-width: 970px) {
+  #cardBox h2 {
+    font-size: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  #cardBox h2 {
+    font-size: 50px;
+  }
+}
+
+.fairyElement {
+  font-family: "Cormorant SC", serif;
+  font-size: 20px;
+  margin-inline: auto;
+}
+@media (min-width: 970px) {
+  .fairyElement {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  .fairyElement {
+    font-size: 36px;
+  }
+}
+
+#cardDetail {
+  font-family: "Cormorant SC", serif;
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74);
+  border-radius: 10px;
+  width: 95%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+@media (min-width: 970px) {
+  #cardDetail {
+    width: 700px;
+  }
+}
+#cardDetail h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+@media (min-width: 970px) {
+  #cardDetail h2 {
+    font-size: 52px;
+  }
+}
+
+.cardBtn__detail {
+  margin-inline: auto;
+  background-color: rgb(255, 152, 0);
+}
+
+#cardText {
+  text-align: center;
+}
+#cardText h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+@media (min-width: 970px) {
+  #cardText h2 {
+    font-size: 48px;
+  }
+}
+#cardText h3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+@media (min-width: 970px) {
+  #cardText h3 {
+    font-size: 24px;
+  }
+}
+#cardText h4 {
+  font-size: 24px;
+  font-weight: 800;
+}
+@media (min-width: 970px) {
+  #cardText h4 {
+    font-size: 36px;
+  }
+}
+#cardText p {
+  font-size: 16px;
+  font-weight: 800;
+}
+@media (min-width: 970px) {
+  #cardText p {
+    font-size: 20px;
+  }
+}
+
+#cardBtn {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 50%;
+  gap: 10px;
+}
+@media (min-width: 970px) {
+  #cardBtn {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.fairyImg {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 5px;
+}
+form input {
+  background-color: rgb(202, 209, 192);
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 8px 1px rgb(203, 232, 186);
+  border: none;
+  color: rgb(17, 53, 44);
+  margin-block: 5px;
+  padding-inline: 10px;
+  font-size: 14px;
+}
+@media (min-width: 970px) {
+  form input {
+    font-size: 16px;
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  form input {
+    height: 35px;
+    font-size: 20px;
+    width: 50%;
+  }
+}
+form textarea {
+  background-color: rgb(202, 209, 192);
+  border-radius: 3px;
+  box-shadow: 0px 1px 8px 1px rgb(203, 232, 186);
+  border: none;
+  color: rgb(17, 53, 44);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 14px;
+}
+@media (min-width: 970px) {
+  form textarea {
+    font-size: 16px;
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  form textarea {
+    font-size: 20px;
+    width: 50%;
+  }
+}
+form label {
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+}
+@media (min-width: 970px) {
+  form label {
+    font-size: 24px;
+  }
+}
+
+.footerDiv {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+.footerDiv p {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+body {
+  background-color: rgb(44, 120, 101);
+  align-items: center;
+  height: 100vh;
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74);
+  position: fixed;
+  top: 200px;
+  width: 100%;
+  background: rgb(255, 152, 0);
+}
+.searchDiv h3 {
+  font-size: 30px;
+  font-family: "Cormorant SC", serif;
+}
+@media (min-width: 970px) {
+  .searchDiv h3 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .searchDiv h3 {
+    font-size: 50px;
+  }
+}
+
+.searchSelect {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 20%;
+  top: 250px;
+}
+
+.serchSelectNav {
+  display: flex;
+  gap: 10px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+}
+@media (min-width: 970px) {
+  .searchForm {
+    gap: 100px;
+  }
+}
+
+.searchBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px;
+  justify-content: center;
+}
+@media (min-width: 970px) {
+  .searchBtn {
+    flex-direction: row;
+  }
+}
+
+select,
+input {
+  background-color: rgb(202, 209, 192);
+  width: 90px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 8px 1px rgb(203, 232, 186);
+  border: none;
+  color: rgb(17, 53, 44);
+  margin-block: 5px;
+  font-size: 14px;
+}
+@media (min-width: 970px) {
+  select,
+  input {
+    width: 150px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  select,
+  input {
+    width: 220px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+select option,
+input option {
+  font-size: 14px;
+}
+
+#confirmDeleteFaily__modal {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: rgb(255, 0, 0);
+  z-index: 2;
+  border-radius: 15px;
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74), 0px 1px 16px 1px rgb(47, 83, 74);
+  max-width: 350px;
+}
+#confirmDeleteFaily__modal p {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+#confirmDeleteFaily__modal button {
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74);
+}
+#confirmDeleteFaily__modal #confirmDeleteFaily__btn {
+  background-color: red;
+}
+#confirmDeleteFaily__modal #cancelDelete__btn {
+  background-color: rgb(82, 243, 82);
+  color: black;
+}
+
+#oracleBox {
+  margin-top: 300px;
+  margin-inline: 40px;
+}
+
+#oracleBox__title {
+  margin-block: 10px;
+  font-size: 36px;
+  font-family: "Cormorant SC", serif;
+  text-align: center;
+}
+@media (min-width: 970px) {
+  #oracleBox__title {
+    font-size: 48px;
+  }
+}
+
+#oracleBox__text {
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.5), 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  margin-block: 50px;
+  text-align: center;
+  padding-block: 20px;
+  font-family: "Oswald", sans-serif;
+}
+@media (min-width: 970px) {
+  #oracleBox__text {
+    font-size: 32px;
+  }
+}
+
+#oracleBox__carrusel {
+  height: 1200px;
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.oracle__cards {
+  width: 600px;
+  height: 600px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.oracleCard__title {
+  margin-block: 10px;
+  font-size: 24px;
+  font-family: "Cormorant SC", serif;
+  text-align: center;
+}
+@media (min-width: 970px) {
+  .oracleCard__title {
+    font-size: 32px;
+  }
+}
+
+.oracleCard__text {
+  margin-block: 30px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+@media (min-width: 970px) {
+  .oracleCard__text {
+    font-size: 20px;
+  }
+}
+
+#cardOracleBox {
+  box-shadow: 0px 1px 16px 1px rgb(47, 83, 74);
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgb(155, 190, 135);
+  margin-bottom: 10px;
+  font-family: "Cormorant SC", serif;
+  font-weight: 800;
+}
+@media (min-width: 970px) {
+  #cardOracleBox {
+    width: 400px;
+  }
+}
+#cardOracleBox h2 {
+  text-align: center;
+  font-size: 32px;
+}
+@media (min-width: 970px) {
+  #cardOracleBox h2 {
+    font-size: 48px;
+  }
+}
+#cardOracleBox h3 {
+  text-align: center;
+  font-size: 18px;
+}
+@media (min-width: 970px) {
+  #cardOracleBox h3 {
+    font-size: 24px;
+  }
+}
+#cardOracleBox h4 {
+  text-align: center;
+  font-size: 24px;
+}
+@media (min-width: 970px) {
+  #cardOracleBox h4 {
+    font-size: 32px;
+  }
+}
+#cardOracleBox p {
+  text-align: center;
+  font-size: 16px;
+}
+@media (min-width: 970px) {
+  #cardOracleBox p {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

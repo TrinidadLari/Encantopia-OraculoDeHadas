@@ -1,0 +1,87 @@
+.searchDiv {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 10vh;
+	box-shadow: $shadow-dark;
+	position: fixed;
+	top: 200px;
+	width: 100%;
+	background: $details-color;
+
+	h3 {
+		font-size: 30px;
+		font-family: "Cormorant SC", serif;
+
+		@include md() {
+			font-size: 40px;
+		}
+
+		@include md-max() {
+			font-size: 50px;
+		}
+	}
+}
+
+.searchSelect {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left: 20%;
+	top: 250px;
+}
+
+.serchSelectNav{
+  display: flex;
+  gap: 10px;
+}
+
+.searchForm {
+	display: flex;
+	flex-direction: row;
+  align-items: inherit;
+
+	@include md() {
+		gap: 100px;
+	}
+}
+
+.searchBtn {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-right: 10px;
+	justify-content: center;
+
+	@include md() {
+		flex-direction: row;
+	}
+}
+
+select,
+input {
+	background-color: $font-color-light;
+	width: 90px;
+	height: 30px;
+	border-radius: 3px;
+	box-shadow: $shadow-light;
+	border: none;
+	color: $font-color-dark;
+	margin-block: 5px;
+	font-size: 14px;
+
+	@include md() {
+		width: 150px;
+		font-size: 16px;
+	}
+
+	@include md-max() {
+		width: 220px;
+		height: 35px;
+		font-size: 20px;
+	}
+
+	option {
+		font-size: 14px;
+	}
+}

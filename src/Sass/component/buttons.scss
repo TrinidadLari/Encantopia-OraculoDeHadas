@@ -1,0 +1,33 @@
+button,
+.button {
+	background-color: $secondary-color;
+	height: 30px;
+	border-radius: 6px;
+	box-shadow: $shadow-light;
+	border: none;
+	color: $font-color-dark;
+	font-family: "Cormorant SC", serif;
+	font-weight: 800;
+	font-style: normal;
+	font-size: 20px;
+	padding: 8px;
+	line-height: 10px;
+
+	@include md() {
+    font-size: 24;
+	}
+
+	@include md-max() {
+		font-size: 28px;
+	}
+}
+
+.cardBtnReturn__newF{
+  @include md() {
+      width: 70%;
+		}
+
+		@include md-max() {
+      width: 50%;
+		}
+}

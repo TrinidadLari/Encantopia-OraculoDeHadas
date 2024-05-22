@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="src/style.css" />
+		<title>Encantopía</title>
+	</head>
+	<body id="bodyId">
+		<main id="mainId">
+			<nav>
+				<h1>Oráculo de Hadas</h1>
+				<div class="nav_btns">
+					<button id="messageRandom__btn">MENSAJE</button>
+					<button id="oracleBox__btn">ORÁCULO</button>
+					<!-- <button id="addNewFaily">AGREGAR HADA</button> -->
+				</div>
+			</nav>
+			<div class="searchDiv">
+				<span id="spanFilter__btn"><h3>Filtrar</h3></span>
+				<form class="searchForm">
+					<div id="searchSelect" class="searchSelect hidden">
+						<select name="" id="selectVerb">
+							<option value="Acción...">Acción...</option>
+							<option value="Paciencia">Paciencia</option>
+							<option value="Gratitud">Gratitud</option>
+							<option value="Fluir">Fluir</option>
+							<option value="Decisión">Decisión</option>
+							<option value="Escucha">Escucha</option>
+							<option value="Disfrute">Disfrute</option>
+							<option value="Confianza">Confianza</option>
+							<option value="Silencio">Silencio</option>
+							<option value="Amor">Amor</option>
+							<option value="Quietud">Quietud</option>
+							<option value="Actuar">Actuar</option>
+						</select>
+
+						<select name="" id="selectElement">
+							<option value="Elemento...">Elemento...</option>
+							<option value="Agua">Agua</option>
+							<option value="Tierra">Tierra</option>
+							<option value="Fuego">Fuego</option>
+							<option value="Aire">Aire</option>
+							<option value="Alma">Alma</option>
+						</select>
+						<select name="" id="selectColor">
+							<option value="Color...">Color...</option>
+							<option value="Aguamarín">Aguamarín</option>
+							<option value="Verde">Verde</option>
+							<option value="Rosado">Rosado</option>
+							<option value="Blanco">Blanco</option>
+							<option value="Limón">Limón</option>
+							<option value="Madera">Madera</option>
+							<option value="Naranja">Naranja</option>
+							<option value="Rojo">Rojo</option>
+						</select>
+					</div>
+					<div class="searchBtn">
+						<!-- <button>BUSCAR</button> -->
+						<button id="cleanSelect__btn">RESTABLECER</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="" id="spinnerBox">
+				<img src="../assets/svg/tadpole.svg" alt="Cargando" />
+			</div>
+
+			<div class="cardsBox" id="cardsBox"></div>
+			<div id="cardNewFaily" class="hidden">
+				<form id="cardNewFaily__form">
+					<label for="imgUpload__url" class="imgUpload__title"
+						>URL imagen</label
+					>
+					<input
+						type="text"
+						class="imgUpload__url"
+						id="imgUpload__url"
+						aria-label="URL de imagen"
+					/>
+					<label for="nameInput__newF">Nombre</label>
+					<input type="text" name="" id="nameInput__newF" />
+					<label for="verbInput__newF">Acción</label>
+					<input type="text" name="" id="verbInput__newF" />
+					<label for="elementInput__newF">Elemento</label>
+					<input type="text" name="" id="elementInput__newF" />
+					<label for="colorInput__newF">Color</label>
+					<input type="text" name="" id="colorInput__newF" />
+					<label for="messageInput__newF">Mensaje</label>
+					<textarea name="" id="messageInput__newF"></textarea>
+					<button class="cardBtnReturn__newF" data-cardid="${id}">
+						Cancelar
+					</button>
+					<input
+						type="submit"
+						class="button"
+						id="confirmNewFaily__btn"
+						value="Crear"
+					/>
+				</form>
+			</div>
+			<div id="oracleBox" class="hidden">
+				<h2 id="oracleBox__title">Sendero a tu Alma</h2>
+				<p id="oracleBox__text">
+					En este Sendero encontrarás un atajo hacia lo mas profundo de tu alma.
+					Hay 5 virtudes que pueden ser marcas en el camino para no perderte. Es
+					importante interiorizarlas en el orden que te llegan... Son mensajes
+					amorosos que si no resuenan con vos podes dejarlas ir 🤍
+				</p>
+				<div id="oracleBox__carrusel">
+					<div id="oracleBox__card1" class="oracle__cards">
+						<h3 class="oracleCard__title">1° TIERRA</h3>
+						<p class="oracleCard__text">
+							El primer paso es la acción concreta, lo que te conecta a tierra
+							para poder empezar a caminar desde la conciencia... Tu fortaleza
+							es:
+						</p>
+						<div id="oracleBox__faily1" class="oracleBox__faily">X</div>
+					</div>
+
+					<div id="oracleBox__card2" class="oracle__cards">
+						<h3 class="oracleCard__title">2° AGUA</h3>
+						<p class="oracleCard__text">
+							Las emociones a veces necesitan de nuestra contención. Calmar las
+							aguas internas es el siguiente paso para lograr el equilibrio que
+							nos vuelve al eje. Tu fortaleza en el plano emocional es:
+						</p>
+						<div id="oracleBox__faily2" class="oracleBox__faily">X</div>
+					</div>
+
+					<div id="oracleBox__card3" class="oracle__cards">
+						<h3 class="oracleCard__title">3° AIRE</h3>
+						<p class="oracleCard__text">
+							Si tenemos una tierra firme el aire nos permite dibujar la melodia
+							del alma. Cuando nuestra tierra no esta equilibrada un exceso de
+							aire puede generarnos una actividad mental pesada. Tu fortaleza
+							para acallar los pensamientos y conectar con la tierra es:
+						</p>
+						<div id="oracleBox__faily3" class="oracleBox__faily">X</div>
+					</div>
+
+					<div id="oracleBox__card4" class="oracle__cards">
+						<h3 class="oracleCard__title">4° FUEGO</h3>
+						<p class="oracleCard__text">
+							El fuego es la acción, la potencia, el deseo y disfrute. El fuego
+							es el motor que nos impulsa a lograr en este plano todo aquello
+							que nos hace feliz. En equilibrio el gozo es infinito!! Tu
+							fortaleza se enciende a travez de:
+						</p>
+						<div id="oracleBox__faily4" class="oracleBox__faily">X</div>
+					</div>
+
+					<div id="oracleBox__card5" class="oracle__cards">
+						<h3 class="oracleCard__title">5° ALMA</h3>
+						<p class="oracleCard__text">
+							Llegamos al Alma, a casa... Conetar con nuestro ser mas profundo
+							es una dicha sagrada. Las Hadas te regalan un último mensaje para
+							que disfrutes el sendero del bien:
+						</p>
+						<div id="oracleBox__faily5" class="oracleBox__faily">X</div>
+					</div>
+				</div>
+			</div>
+		</main>
+    <footer>
+      <div class="footerDiv">
+        <div class="footerNav">
+        <a href="https://github.com/TrinidadLari" target="_blank"><img src="assets/svg/icons8-github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/trinidad-lari-4b2047286/" target="_blank"><img src="assets/svg/icons8-linkedin.svg" alt=""></a>
+        </div>
+        <p>©2024 - By Trinidad Sabina Lari 🧡</p>
+      </div>
+    </footer>
+	</body>
+
+	<script src="src/js/main.js"></script>
+	<script src="src/js/put.js"></script>
+	<script src="src/js/post.js"></script>
+	<script src="src/js/filters.js"></script>
+	<script src="src/js/message.js"></script>
+	<script src="src/js/oracle.js"></script>
+  <script src="src/js/removehidden.js"></script>
+</html>
